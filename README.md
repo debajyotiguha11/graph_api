@@ -1,11 +1,11 @@
 # graph_api
-Using Facebook Graph API to find users with similar interes : https://developers.facebook.com/docs/graph-api
+Using Facebook Graph API to find users with similar interests : https://developers.facebook.com/docs/graph-api
 
 ## Screenshots
 <p align="center">
   <img src="https://github.com/debajyotiguha11/graph_api/blob/master/img/img1.png" >
   <img src="https://github.com/debajyotiguha11/graph_api/blob/master/img/img2.png" >
-  <img src="https://github.com/debajyotiguha11/graph_api/blob/master/img/img2.png" >
+  <img src="https://github.com/debajyotiguha11/graph_api/blob/master/img/img3.png" >
  </p>
  
  ## Steps
