@@ -1,0 +1,32 @@
+<html>
+<head>
+    <link rel="stylesheet" href="/static/css/style1.css" type="text/css">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="icon" type="image/png" href="https://png.icons8.com/plasticine/100/technical-support.png">
+</head>
+<title>Welcome to interest finder</title>
+<body>
+</body>
+<form action="/flogin" method="POST">
+	<div class="login">
+		<div class="login-screen">
+			<div class="app-title">
+				<h1>Let's get started</h1>
+			</div>
+
+			<div class="login-form">
+				<div class="control-group">
+				<input type="submit" value="Log in with Facebook" class="btn btn-primary btn-large btn-block" ><br>
+				</div>
+			</div>
+		</div>
+	</div>
+</form>
+<form action="/submit" method="POST">
+    <center><input type="text" placeholder="Access Token" name="token" required></center>
+<input type="submit" value="submit" class="btn btn-primary btn-large btn-block" ><br>
+</form>
+<a href="/search"><input type="submit" value="Search Similar Interest" class="btn btn-primary btn-large btn-block" ><br></a>
+</body>
+</html>
+
