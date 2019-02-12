@@ -62,17 +62,28 @@ $(function () {
                     <tr>
                         <th>NAME</th>
                         <th>HOME TOWN</th>
+			<th>LIKED PAGES</th>
                         <th>POSTS</th>
                     </tr>
                 </thead>
                 <tbody>
+		{% if result %}
                     {% for row in result %}
                     <tr>
                         <td>{{row.1}}</td>
                         <td>{{row.2}}</td>
                         <td>{{row.3}}</td>
+			<td>{{row.4}}</td>
                     </tr>
                 {% endfor %}
+		{% else %}
+		<tr>
+                        <td>NO DATA</td>
+                        <td>NO DATA</td>
+                        <td>NO DATA</td>
+			<td>NO DATA</td>
+                    </tr>
+		{% endif %}
                 </tbody>
             </table>
             <hr>

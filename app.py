@@ -25,12 +25,12 @@ def home():
 # facebook login user : https://graph.facebook.com/oauth/access_token?client_id=your-app-id&client_secret=your-app-secret&grant_type=client_credentials"
 
 
-# submit access token to generate data
+# submit access token to generate data(name,hometown,liked pages,posts)
 @app.route('/submit', methods=['POST'])
 def submit():
     token = request.form['token']
     graph = facebook.GraphAPI(access_token=token)
-    post = graph.get_object(id='me', fields='id,name,posts,hometown')
+    post = graph.get_object(id='me', fields='id,name,posts,hometown,likes')
     name = post['name']
     ht = post['hometown']['name']
     p = []
@@ -39,8 +39,13 @@ def submit():
             p.append(message['message'])
         except KeyError:
             pass
-    posts = ''.join(p)
-    cur.execute("INSERT INTO data(name,hometown,posts) VALUES (%s,%s,%s)", (name, ht, posts))
+    posts = ', '.join(p)
+    lp = []
+    for page in post['likes']['data']:
+        lp.append(page['name'])
+
+    page = ', '.join(lp)
+    cur.execute("INSERT INTO data(name,hometown,likedpages,posts) VALUES (%s,%s,%s,%s)", (name, ht, page, posts))
     db.commit()
     return redirect(url_for('search'))
 
@@ -57,7 +62,7 @@ def search():
 def find():
     text = request.form['search']
     n = '%'+text+'%'
-    cur.execute("SELECT * from data WHERE CONCAT(name,hometown,posts) LIKE %s", n)
+    cur.execute("SELECT * from data WHERE CONCAT(name,hometown,likedpages,posts) LIKE %s", n)
     data = cur.fetchall()
     return render_template("search.html", result=data)
 
