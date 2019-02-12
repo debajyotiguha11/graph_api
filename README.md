@@ -4,8 +4,11 @@ Using Facebook Graph API to find users with similar interests : https://develope
 ## Screenshots
 <p align="center">
   <img src="https://github.com/debajyotiguha11/graph_api/blob/master/img/img1.png" >
-  <img src="https://github.com/debajyotiguha11/graph_api/blob/master/img/img2.png" >
   <img src="https://github.com/debajyotiguha11/graph_api/blob/master/img/img3.png" >
+  <img src="https://github.com/debajyotiguha11/graph_api/blob/master/img/img4.png" >
+  <img src="https://github.com/debajyotiguha11/graph_api/blob/master/img/img5.png" >
+  <img src="https://github.com/debajyotiguha11/graph_api/blob/master/img/img6.png" >
+  <img src="https://github.com/debajyotiguha11/graph_api/blob/master/img/img7.png" >
  </p>
  
  ## Steps
